@@ -1,0 +1,31 @@
+<h3>{{ message }}</h3>
+<h4> View the imported article</h4>
+
+<div class="container bootstrap snippet">
+    <hr>
+ 
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    	
+            <div *ngFor="let item of results"  class="well search-result">
+            	<div class="row" >
+            		<a>
+                		<div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+	                    	<img class="img-responsive cover" src="{{item.urlToImage}}" alt="">
+                		</div>
+                		<div class="col-xs-6 col-sm-9 col-md-9 col-lg-10 title">
+	                    	<h3>{{item.title}}</h3>
+	                    	<p>{{item.description}}</p>
+                		</div>
+                      </a>
+                
+              </div>
+			
+			  <button (click)="view(item)">Read full articles </button>
+            </div>
+   
+           
+		</div>
+    </div>
+</div>
+      
